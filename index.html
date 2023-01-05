@@ -1,0 +1,2647 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://competition.brainobrain.com/images/fevicon.png" type="image/x-icon">
+
+<meta name="csrf-token" content="UoLPQeS2EzHhlexhWsDa4o6NLe4ZIzosE6OIAoi9">
+<title>Brainobrain Competition</title>
+
+
+<script type="application/javascript" src="https://competition.brainobrain.com/js/app.js" defer></script>
+
+<script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+<link rel="stylesheet" href="https://competition.brainobrain.com/dist/plugins/select2/select2.min.css">
+
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+<link href="style.css" rel="stylesheet">
+<style>
+
+/*For typical mobile devices*/
+@media  only screen and (min-width: 320px) and (max-width: 479px) {
+    //CSS Code
+}
+/*For mobile (landscape)*/
+@media  only screen and (min-width: 480px) and (max-width: 767px) {
+    //CSS Code
+}
+/*For tablet*/
+@media  only screen and (min-width: 768px) and (max-width: 979px) {
+    //CSS Code
+}
+/*For small desktop*/
+@media  only screen and (min-width: 980px) and (max-width: 1023px) {
+    .new-container {
+        background: url(https://competition.brainobrain.com/images/International-Web-Banner-1920x790.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 700px;
+    }
+}
+/*For typical desktop*/
+@media  only screen and (min-width: 1024px) and (max-width: 1199px) {
+    .new-container {
+        background: url(https://competition.brainobrain.com/images/International-Web-Banner-1920x790.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 700px;
+    }
+}
+/*For large desktop*/
+@media  only screen and (min-width: 1200px) {
+    .new-container {
+        background: url(https://competition.brainobrain.com/images/Web_Banner_01.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 700px;
+    }
+}
+
+.bg-repeate {
+    background-image:url(https://competition.brainobrain.com/images/repeateimg.png);
+    background-repeat:repeat;
+    min-height: 700px;
+    }
+
+
+.row:before, .row:after {display: inline-block;}
+/*
+.row:before, .row:after {display: none !important;}
+*/
+    </style>
+</head>
+<body>
+<div id="app">
+<nav id="navbar_top" class="navbar navbar-expand-md navbar-light bg-white shadow-sm ">
+<div class="container">
+<a class="navbar-brand" href="https://competition.brainobrain.com">
+<img src="https://competition.brainobrain.com/images/logo1.png" style=" width: 44px;" />
+<span style="color:orange">BRAINOBRAIN</span>
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+<ul class="navbar-nav mr-auto">
+</ul>
+
+<ul class="navbar-nav ml-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="https://competition.brainobrain.com/home">Home</a>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Competition </a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="https://competition.brainobrain.com/student/pr-student-list">Competition Registration</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+SANIDYA GUPTA
+</a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="https://competition.brainobrain.com/logout" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+Logout
+</a>
+<form id="logout-form" action="https://competition.brainobrain.com/logout" method="POST" class="d-none">
+<input type="hidden" name="_token" value="UoLPQeS2EzHhlexhWsDa4o6NLe4ZIzosE6OIAoi9"> </form>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<main>
+<div>
+<div class="p-3 mb-2 bg-info text-white text-center h2">9th International Competition (Online)</div>
+</div>
+
+<div class="twrapper">
+<div class="container-fluid">
+<form method="get" id="form-show-test-review" action="https://competition.brainobrain.com/exam/show" enctype="multipart/form-data">
+<input type="hidden" name="_token" value="UoLPQeS2EzHhlexhWsDa4o6NLe4ZIzosE6OIAoi9">
+<input type="hidden" id="hdn_test_data" name="hdn_test_data" value="" />
+<input type="hidden" id="hdn_test_st" name="hdn_test_st" value="" />
+<input type="hidden" id="hdn_usr_timezone" name="hdn_usr_timezone" value="" />
+<input type="hidden" id="hdn_usr_practice_level" name="hdn_usr_practice_level" value="Level 5" />
+</form>
+<form method="post" id="form-show-test-store" action="https://competition.brainobrain.com/exam/store" enctype="multipart/form-data">
+<input type="hidden" name="_token" value="UoLPQeS2EzHhlexhWsDa4o6NLe4ZIzosE6OIAoi9">
+<input type="hidden" id="hdn_test_data_store" name="hdn_test_data_store" value="" />
+<input type="hidden" id="hdn_test_st_store" name="hdn_test_st_store" value="" />
+</form>
+<div class="row fixed-top" style=" border-top: 1px solid grey; border-bottom: 1px solid grey; background-color: #FDFEFE; z-index: 1; margin-top: 62px;"> 
+<div class="col-md-3 form-inline pl-4">
+<span>Section&nbsp;</span> <span id="sectionOf"></span> <select id="ddSection" class="form-control form-control-sm ml-2">
+</select>
+</div>
+<div class="col-md-7" style=" border: 0px solid grey;">
+<div id="paginationBtns" class="pt-3"></div>
+
+</div>
+<div class="col-md-2 pt-4">
+<span class="float-left"><b class="Timer pl-2"></b></span>
+<button onClick="showResult('YZ8p_5B_jR')" style=" background-color: #CCD1D1;" class="btn btn-sm float-right mr-2 mb-2">Finish Test</button>
+</div>
+</div> 
+
+<div id="sumsBlock" class="row mt-5">
+</div>
+<div id="testBlock" class="row mb-15">
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</div>
+<div class="row fixed-bottom" style=" border-top: 1px solid grey; border-bottom: 1px solid grey; background-color: #F2F3F4; z-index: 1; height: 60px; "> 
+<div class="col-md-4 pt-2 pl-5">
+<img src="https://competition.brainobrain.com/images/logo1.png" style=" width: 44px;" />
+</div>
+<div class="col-md-5 pt-3">
+<span class="highlight">SANIDYA GUPTA</span>
+</div>
+<div id="bottomNavButtons" class="col-md-3">
+</div>
+</div>
+</div> 
+</div> 
+</main>
+</div>
+
+
+
+<script type="application/javascript" src="add-sub.js"></script>
+
+
+<script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data-2012-2022.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="application/javascript">
+    var groups = {};
+$( document ).ready(function() {
+
+    // alert( $('#showResult').is(':visible') );
+    // $(function(){
+    // alert('test');
+    // window.onload = function() {
+                $("#nextBtn").css('display','none');
+                // var tz = moment.tz.guess();
+                // alert(tz);
+    // $(document).load(function(){
+    // console.log($("#nextBtn"));
+    // $('#answer_input1').attr('readonly','readonly');
+        // console.log(BOBASSESSMENT.additionAndSubstration.negativeIndex(5,2));
+        // console.log(BOBASSESSMENT.additionAndSubstration.singleDigit(5,2));
+    // function randomIntFromInterval(min, max) { // min and max included
+    //     return Math.floor(Math.random() * (max - min + 1) + min);
+    // }
+    // $('#toggle-demo').bootstrapToggle();
+    function myAlert(t){
+            // alert('Hi');
+            clearInverval(t)
+    }
+
+    function codeAddress(address) {
+            return address;
+    }
+    function switchChange(){
+          alert(($(this).parent()));
+        // alert($("#toggle-demo").prop("checked"));
+      };
+
+        var app = {"programme":"BRAINOBRAIN","level":"Level 5","duration":"10","eligibility":"Children who have completed Bobs - 5 and undergoing Bobs - 6","instruction":"Direct Addition \u0026 Subtraction, Partners, Friends, Multiplication, Division","row_blocks":[{"block_name":"A","block_title":"Addition","instruction":"Addition \u0026 Subtraction","block_subtitle":"Add \/ Less Partner","digits":"DD","rows":7,"sums":7,"max_negative":4},{"block_name":"B","block_title":"Addition","instruction":"Addition \u0026 Subtraction","block_subtitle":"Add \/ Less Partner","digits":"DD","rows":8,"sums":7,"max_negative":4},{"block_name":"C","block_title":"Multiplication","block_subtitle":"Add \/ Less Partner","instruction":"Multiplication","digits":"DD\/SD","rows":1,"sums":15,"max_negative":0},{"block_name":"D","block_title":"Division","block_subtitle":"Add \/ Less Partner","instruction":"Division","digits":"TD\/SD","rows":1,"sums":15,"max_negative":0}]};
+        var sumsArray = [];
+    //     console.log('venkat');
+    //   console.log(app['row_blocks']);
+    //   return;
+        if(app['row_blocks'])
+        {
+            var blocks = app['row_blocks'];
+            if(blocks.length > 0){
+                for(a=0;a<blocks.length;a++){
+                    // console.log('just print: ' + a);
+                    var block = blocks[a];
+                    var block_type = block['digits'];
+                    var block_category = block['block_title'];
+                    if(block_type == 'SD' && block_category == 'Addition'){ //Single Digit
+                        for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.additionAndSubstration.singleDigit(block['rows'],block['max_negative']);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                        }
+
+                    }else if(block_type == 'DD' && block_category == 'Addition'){ // Double Digit
+                        for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.additionAndSubstration.doubleDigit(block['rows'],block['max_negative']);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                        }
+
+                    }else if(block_type == 'DD100' && block_category == 'Addition'){ // Double Digit
+                        for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.additionAndSubstration.doubleDigitLessThanHundred(block['rows'],block['max_negative']);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                        }
+
+                    }else if(block_type == 'TD' && block_category == 'Addition'){ // Double Digit
+                        console.log(block);
+                        for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.additionAndSubstration.tripleDigit(block['rows'],block['max_negative']);
+                            // sumsArray.push({'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                        }
+
+                    }else if(block_type == 'SD/DD' && block_category == 'Addition'){ //Single/Double Digit
+                        for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.additionAndSubstration.singleDoubleDigit(block['rows'],block['max_negative']);
+                             sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                        }
+
+                    }else if(block_type == 'MOD1' && block_category == 'Addition'){
+                         for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.mod1.directAddition(block['rows']);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'MOD2' && block_category == 'Addition'){
+                         for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.mod2.singleDigit(block['rows'],block['max_negative']);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'MOD3-SD' && block_category == 'Addition'){
+                         for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.mod3.singleDigit(block['rows'],block['max_negative']);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'Level1-SD' && block_category == 'Addition'){
+                         for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.mod2.singleDigit(block['rows'],block['max_negative']);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'Level2-SD-2DD-Top' && block_category == 'Addition'){
+                         for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.level2.singleDigitTwoDDonTop(block['rows'],block['max_negative']);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'DD/SD' && block_category == 'Multiplication'){
+                         for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.multiplication.doubleDigitSingleDigit();
+                            // console.log(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  [], 'ans_breakup': [], 'multiplicand' : sdReturn[0]['multiplicand'], 'multiplier' : sdReturn[0]['multiplier'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'TD/SD' && block_category == 'Multiplication'){
+                         for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.multiplication.tripleDigitSingleDigit();
+                            // console.log(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  [], 'ans_breakup': [], 'multiplicand' : sdReturn[0]['multiplicand'], 'multiplier' : sdReturn[0]['multiplier'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'DD/DD' && block_category == 'Multiplication'){
+                        // alert(block_type);
+                         for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.multiplication.doubleDigitDoubleDigit();
+                            // console.log(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  [], 'ans_breakup': [], 'multiplicand' : sdReturn[0]['multiplicand'], 'multiplier' : sdReturn[0]['multiplier'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'singleDigitDecimal' && block_category == 'Addition'){
+                        for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.decimal.singleDigitDecimal(block['rows'],block['max_negative']);
+                            // alert(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  ((sdReturn[0]['answer']).toFixed(2)).toString(), 'student_answer'   : null});
+                        }
+                    }else if(block_type == 'singleDigitDecimalWithoutLessThanOne' && block_category == 'Addition'){
+                        for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.decimal.singleDigitDecimalWithoutLessThanOne(block['rows'],block['max_negative']);
+                            // alert(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  ((sdReturn[0]['answer']).toFixed(2)).toString(), 'student_answer'   : null});
+                        }
+                    }else if(block_type == 'doubleDigitDecimalWithoutLessThanOne' && block_category == 'Addition'){
+                        for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.decimal.doubleDigitDecimalWithoutLessThanOne(block['rows'],block['max_negative']);
+                            // alert(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  ((sdReturn[0]['answer']).toFixed(2)).toString(), 'student_answer'   : null});
+                        }
+                    }else if(block_type == 'singleDoubleDigitDecimalWithoutLessThanOne' && block_category == 'Addition'){
+                        for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.decimal.singleDoubleDigitDecimalWithoutLessThanOne(block['rows'],block['max_negative']);
+                            // alert(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  sdReturn[0]['sum_items'], 'ans_breakup': sdReturn[0]['ans_breakup'], 'answer'    :  ((sdReturn[0]['answer']).toFixed(2)).toString(), 'student_answer'   : null});
+                        }
+                    }else if(block_type == 'TD/DD' && block_category == 'Multiplication'){
+                         for(b=0;b<block['sums'];b++){
+                            var sdReturn = BOBASSESSMENT.multiplication.tripleDigitDoubleDigit();
+                            // console.log(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  [], 'ans_breakup': [], 'multiplicand' : sdReturn[0]['multiplicand'], 'multiplier' : sdReturn[0]['multiplier'], 'answer'    :  sdReturn[0]['answer'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'TD/SD' && block_category == 'Division'){
+                        var random_negative_index = BOBASSESSMENT.general.negativeIndex(block['sums'],3);
+                         for(b=0;b<block['sums'];b++){
+                            var cnt = 0;
+                            for(c=0;c<random_negative_index.length;c++)
+                                {
+                                    if(random_negative_index[c] == b)
+                                    {
+                                        cnt += 1;
+                                    }
+                                }
+                                if(cnt > 0)
+                                {
+                                    var sdReturn = BOBASSESSMENT.division.tripleDigitsSingleDigit('yes');
+                                }else{
+                                    var sdReturn = BOBASSESSMENT.division.tripleDigitsSingleDigit('yes');
+                                }
+                            // console.log(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  [], 'ans_breakup': [], 'dividend' : sdReturn[0]['devidend'], 'divisor' : sdReturn[0]['divisor'], 'answer'    :  sdReturn[0]['answer'], 'remainder' : sdReturn[0]['remainder'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'FD/SD' && block_category == 'Division'){
+                        var random_negative_index = BOBASSESSMENT.general.negativeIndex(block['sums'],3);
+                         for(b=0;b<block['sums'];b++){
+                            var cnt = 0;
+                            for(c=0;c<random_negative_index.length;c++)
+                                {
+                                    if(random_negative_index[c] == b)
+                                    {
+                                        cnt += 1;
+                                    }
+                                }
+                                if(cnt > 0)
+                                {
+                                    var sdReturn = BOBASSESSMENT.division.fourDigitsSingleDigit('yes');
+                                }else{
+                                    var sdReturn = BOBASSESSMENT.division.fourDigitsSingleDigit('yes');
+                                }
+                            // console.log(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  [], 'ans_breakup': [], 'dividend' : sdReturn[0]['devidend'], 'divisor' : sdReturn[0]['divisor'], 'answer'    :  sdReturn[0]['answer'], 'remainder' : sdReturn[0]['remainder'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'DD/DD' && block_category == 'Division'){
+                        var random_negative_index = BOBASSESSMENT.general.negativeIndex(block['sums'],3);
+                         for(b=0;b<block['sums'];b++){
+                            var cnt = 0;
+                            for(c=0;c<random_negative_index.length;c++)
+                                {
+                                    if(random_negative_index[c] == b)
+                                    {
+                                        cnt += 1;
+                                    }
+                                }
+                                if(cnt > 0)
+                                {
+                                    var sdReturn = BOBASSESSMENT.division.doubleDigitDoubleDigit('yes');
+                                }else{
+                                    var sdReturn = BOBASSESSMENT.division.doubleDigitDoubleDigit('yes');
+                                }
+                            // console.log(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  [], 'ans_breakup': [], 'dividend' : sdReturn[0]['devidend'], 'divisor' : sdReturn[0]['divisor'], 'answer'    :  sdReturn[0]['answer'], 'remainder' : sdReturn[0]['remainder'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'TD/DD' && block_category == 'Division'){
+                        var random_negative_index = BOBASSESSMENT.general.negativeIndex(block['sums'],3);
+                         for(b=0;b<block['sums'];b++){
+                            var cnt = 0;
+                            for(c=0;c<random_negative_index.length;c++)
+                                {
+                                    if(random_negative_index[c] == b)
+                                    {
+                                        cnt += 1;
+                                    }
+                                }
+                                if(cnt > 0)
+                                {
+                                    var sdReturn = BOBASSESSMENT.division.tripleDigitDoubleDigit('yes');
+                                }else{
+                                    var sdReturn = BOBASSESSMENT.division.tripleDigitDoubleDigit('yes');
+                                }
+                            // console.log(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  [], 'ans_breakup': [], 'dividend' : sdReturn[0]['devidend'], 'divisor' : sdReturn[0]['divisor'], 'answer'    :  sdReturn[0]['answer'], 'remainder' : sdReturn[0]['remainder'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'FD/DD' && block_category == 'Division'){
+                        var random_negative_index = BOBASSESSMENT.general.negativeIndex(block['sums'],3);
+                         for(b=0;b<block['sums'];b++){
+                            var cnt = 0;
+                            for(c=0;c<random_negative_index.length;c++)
+                                {
+                                    if(random_negative_index[c] == b)
+                                    {
+                                        cnt += 1;
+                                    }
+                                }
+                                if(cnt > 0)
+                                {
+                                    var sdReturn = BOBASSESSMENT.division.fourDigitDoubleDigit('yes');
+                                }else{
+                                    var sdReturn = BOBASSESSMENT.division.fourDigitDoubleDigit('yes');
+                                }
+                            // console.log(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  [], 'ans_breakup': [], 'dividend' : sdReturn[0]['devidend'], 'divisor' : sdReturn[0]['divisor'], 'answer'    :  sdReturn[0]['answer'], 'remainder' : sdReturn[0]['remainder'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'FiD/DD' && block_category == 'Division'){
+                        var random_negative_index = BOBASSESSMENT.general.negativeIndex(block['sums'],3);
+                         for(b=0;b<block['sums'];b++){
+                            var cnt = 0;
+                            for(c=0;c<random_negative_index.length;c++)
+                                {
+                                    if(random_negative_index[c] == b)
+                                    {
+                                        cnt += 1;
+                                    }
+                                }
+                                if(cnt > 0)
+                                {
+                                    var sdReturn = BOBASSESSMENT.division.fiveDigitDoubleDigit('yes');
+                                }else{
+                                    var sdReturn = BOBASSESSMENT.division.fiveDigitDoubleDigit('yes');
+                                }
+                            // console.log(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  [], 'ans_breakup': [], 'dividend' : sdReturn[0]['devidend'], 'divisor' : sdReturn[0]['divisor'], 'answer'    :  sdReturn[0]['answer'], 'remainder' : sdReturn[0]['remainder'], 'student_answer'   : null});
+                         }
+                    }else if(block_type == 'SixD/DD' && block_category == 'Division'){
+                        var random_negative_index = BOBASSESSMENT.general.negativeIndex(block['sums'],3);
+                         for(b=0;b<block['sums'];b++){
+                            var cnt = 0;
+                            for(c=0;c<random_negative_index.length;c++)
+                                {
+                                    if(random_negative_index[c] == b)
+                                    {
+                                        cnt += 1;
+                                    }
+                                }
+                                if(cnt > 0)
+                                {
+                                    var sdReturn = BOBASSESSMENT.division.sixDigitDoubleDigit('yes');
+                                }else{
+                                    var sdReturn = BOBASSESSMENT.division.sixDigitDoubleDigit('yes');
+                                }
+                            // console.log(sdReturn);
+                            sumsArray.push({'block_type' : block_type, 'section' : block['block_name'], 'category' : block_category, 'title'     :   block['block_title'], 'sub_title' : block['block_subtitle'], 'sum_no'    :   b + 1, 'sum_items' :  [], 'ans_breakup': [], 'dividend' : sdReturn[0]['devidend'], 'divisor' : sdReturn[0]['divisor'], 'answer'    :  sdReturn[0]['answer'], 'remainder' : sdReturn[0]['remainder'], 'student_answer'   : null});
+                         }
+                    }else{
+
+                    }
+                }
+            }else{
+                $("#setTitle").val('Rows and Blocks not defined for this Level');
+            }
+            // alert(blocks.length);
+        }
+        var triggerAtY;
+
+        console.log(sumsArray);
+        firstFocus = "";
+        // var groups = {};
+        for (var i = 0; i < sumsArray.length; i++) {
+        var groupName = sumsArray[i].section;
+        if (!groups[groupName]) {
+            groups[groupName] = [];
+        }
+        groups[groupName].push({
+            'section'   :   sumsArray[i].section,
+            'block_type'    :   sumsArray[i].block_type,
+            'ans_breakup'   :   sumsArray[i].ans_breakup,
+            'answer'    :   sumsArray[i].answer,
+            'student_answer'    :   "",
+            'start_time'    :   sumsArray[i].start_time,
+            'student_answer'    :   sumsArray[i].student_answer,
+            'multiplicand'  :   sumsArray[i].multiplicand ? sumsArray[i].multiplicand : "",
+            'multiplier'    :   sumsArray[i].multiplier ? sumsArray[i].multiplier : "",
+            'dividend'  :   sumsArray[i].dividend ? sumsArray[i].dividend : "",
+            'divisor'    :   sumsArray[i].divisor ? sumsArray[i].divisor : "",
+            'sub_title' :   sumsArray[i].sub_title,
+            'sum_no'    :   sumsArray[i].sum_no,
+            'title'     :   sumsArray[i].title,
+            'category' : sumsArray[i].category,
+            'sum_items' : sumsArray[i].sum_items
+            });
+        }
+        // console.log(groups['A']);
+        createSectionDropDown(groups);
+        createSection(groups['A']);
+        $("#sectionOf").html(" " + (1) + " of " + $('#ddSection option').length);
+        // scrollToTop();
+        $(document).on('change','#ddSection',function(){
+            updateAnsToArray();
+            var selSection = $("#ddSection").val();
+            var secCount = $('#ddSection option').length;
+            var selIndex = $("#ddSection")[0].selectedIndex;
+            createSection(groups[selSection]);
+            createNavButtons(groups[selSection]);
+            $("#sectionOf").html(" " + (selIndex+1) + " of " + secCount);
+        });
+
+        function createSectionDropDown(arr){
+            var ddString = "";
+            $.each(groups, function(key, value) {
+                ddString += "<option value='" + key + "'>Section " + key + "</option>"
+            });
+            $("#ddSection").html(ddString);
+        }
+        function createSection(arr){
+            firstString = "<div class='col-md-12'><table class='table' width='100%'><tbody>";
+            for(a=0;a<arr.length;a++){
+                if(a==0){
+                    firstFocus = arr[a]['section'] + (a+1).toString();
+                }
+                if(arr[a]['category'] == "Addition"){
+                    var sumId = arr[a]['section'] + (a+1);
+                    // console.log(groups['D'][a]);
+                    firstString += "<tr id='subBlock_" + sumId + "' style=' height: 100px;'></tr>";
+                    firstString += "<tr><td width='50%' style='border-top: 0px solid #dee2e6;'><div class='alert' style='padding: 0.50rem 1.25rem; background-color: #D6EAF8;' role='alert'>Question # " + (a + 1) + "</div></td><td style='border-top: 0px solid #dee2e6;'><div class='alert' style='padding: 0.50rem 1.25rem;  background-color: #D6EAF8;' role='alert'>Enter your response</div></td></tr>";
+                    firstString +=  "<tr id='" + sumId + "' style=' height: 200px;'>";
+                    firstString += "<td style='border-top: 0px solid #dee2e6; font-size: 20px; font-weight: bold; padding-top: 0px;'>";
+                    for(b=0;b<arr[a]['sum_items'].length;b++){
+                        firstString += "<div style='width: 100px;' class='text-right'>" + arr[a]['sum_items'][b] + "</div>";
+                    }
+                    firstString += "</td>";
+                    firstString += "<td style='border-top: 0px solid #dee2e6; font-size: 22px; font-weight: bold; padding-top: 0px;'>";
+                    firstString += "<input id='ans_" + sumId + "' data-sec='" + arr[a]['section'] + "' data-order='" + a + "' class='form-control form-control-lg form-control-block stAnswer' type='text' value='" + (arr[a]['student_answer'] == null ? "" : arr[a]['student_answer'])  + "' />"
+                    firstString += "</td>";
+                    firstString += "</tr>";
+                }else if(arr[a]['category'] == "Multiplication"){
+                    var sumId = arr[a]['section'] + (a+1);
+                    // console.log(groups['D'][a]);
+                    firstString += "<tr id='subBlock_" + sumId + "' style=' height: 60px;'></tr>";
+                    firstString += "<tr><td width='50%' style='border-top: 0px solid #dee2e6;'><div class='alert' style='padding: 0.50rem 1.25rem; background-color: #D6EAF8;' role='alert'>Question # " + (a + 1) + "</div></td><td style='border-top: 0px solid #dee2e6;'><div class='alert' style='padding: 0.50rem 1.25rem; background-color: #D6EAF8;' role='alert'>Enter your answer</div></td></tr>";
+                    firstString +=  "<tr id='" + sumId + "' style=' height: 200px;'>";
+                    firstString += "<td style='border-top: 0px solid #dee2e6; font-size: 20px; font-weight: bold; padding-top: 0px;'>";
+                        // console.log(arr[a]);
+                    firstString += "<div style='width: 150px;' class='text-right'>" + arr[a]['multiplicand']['0'] + "  &times;  " + arr[a]['multiplier']['0'] + "</div>" ;
+                    firstString += "</td>";
+                    firstString += "<td style='border-top: 0px solid #dee2e6; font-size: 22px; font-weight: bold; padding-top: 0px;'>";
+                    firstString += "<input id='ans_" + sumId + "' data-sec='" + arr[a]['section'] + "' data-order='" + a + "' class='form-control form-control-lg form-control-block stAnswer' type='text' value='" + (arr[a]['student_answer'] == null ? "" : arr[a]['student_answer'])  + "' />"
+                    firstString += "</td>";
+                    firstString += "</tr>";
+                }else if(arr[a]['category'] == "Division"){
+                    var sumId = arr[a]['section'] + (a+1);
+                    // console.log(groups['D'][a]);
+                    firstString += "<tr id='subBlock_" + sumId + "' style=' height: 60px;'></tr>";
+                    firstString += "<tr><td width='50%' style='border-top: 0px solid #dee2e6;'><div class='alert' style='padding: 0.50rem 1.25rem; background-color: #D6EAF8;' role='alert'>Question # " + (a + 1) + "</div></td><td style='border-top: 0px solid #dee2e6;'><div class='alert' style='padding: 0.50rem 1.25rem; background-color: #D6EAF8;' role='alert'>Enter your answer</div></td></tr>";
+                    firstString +=  "<tr id='" + sumId + "' style=' height: 200px;'>";
+                    firstString += "<td style='border-top: 0px solid #dee2e6; font-size: 20px; font-weight: bold; padding-top: 0px;'>";
+                        // console.log(arr[a]);
+                    firstString +=  "<div style='width: 150px;' class='text-right'>" + arr[a]['dividend']['0'] + "  &#xF7;  " + arr[a]['divisor']['0'] + "</div>" ;
+                    firstString += "</td>";
+                    firstString += "<td style='border-top: 0px solid #dee2e6; font-size: 22px; font-weight: bold; padding-top: 0px;'>";
+                    firstString += "<input id='ans_" + sumId + "' data-sec='" + arr[a]['section'] + "' data-order='" + a + "' class='form-control form-control-lg form-control-block stAnswer' type='text' value='" + (arr[a]['student_answer'] == null ? "" : arr[a]['student_answer'])  + "' />"
+                    firstString += "</td>";
+                    firstString += "</tr>";
+                }
+            }
+            firstString += "</tbody></table></div>";
+            // alert("ans_"+firstFocus);
+            $("#sumsBlock").html(firstString);
+            // $("#ans_"+firstFocus).val("Test");
+            // $(".stAnswer")[0].val('hello');
+            // document.getElementById("ans_"+firstFocus).focus();
+            $(".stAnswer").keyup(function(arr){
+                    var section = $(this).attr('data-sec');
+                    var order = $(this).attr('data-order');
+                    //groups['A']
+                    groups[section][order]['student_answer'] = $(this).val();
+
+                    createNavButtons(groups[section]);
+            });
+
+            var navString = "";
+            for(a=0;a<arr.length;a++){
+                var sumId = arr[a]['section'] + (a+1);
+                navString += "<span id='navEachBtn_" + (a+1) + "' class='float-left mt-1'><a data-focus-block='subBlock_" + sumId + "' data-focus='ans_" + sumId + "' class='focusTo' data-ord='"+(a+1)+"'><span id='navBtn_" + sumId + "' data-arr-length='"+arr.length+"' class='navBtn' style=' margin-left: 8px; border: 1px solid #D6DBDF; border-radius: 4px; padding: 4px 10px; color: grey; cursor: pointer;'>" + (a+1) + "</span></a></span>";
+            }
+
+
+            $("#paginationBtns").html(navString);
+
+
+            $(".focusTo").click(function(){
+                var focusElm = $(this).attr('data-focus-block');
+                var ansElm = $(this).attr('data-focus');
+                var ord = $(this).attr('data-ord');
+                // alert(ord);
+                $(".stAnswer").prop('disabled',true);
+                $("#"+ansElm).prop('disabled',false);
+                $("#pgn_input").val( ord + " of " + arr.length );
+                $("#"+focusElm).get(0).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+
+
+            /* Testing Block on navigation */
+            if(arr.length > 10){
+                var totalQuestions = arr.length;
+                var totalNavBlocks = Math.ceil(totalQuestions / 10);
+                for( a = 11; a <= arr.length; a++ ){
+                    // alert($("#navEachBtn_"+a).html());
+                    if($("#navEachBtn_"+a).hasClass('d-block')){
+                        $("#navEachBtn_"+a).removeClass('d-block');
+                        $("#navEachBtn_"+a).addClass('d-none');
+                    }else{
+                        $("#navEachBtn_"+a).addClass('d-none');
+                    }
+                }
+                $("#paginationBtns").append("<span><span id='previousBtnPage' style=' margin-left: 8px; border: 1px solid #D6DBDF; border-radius: 4px 0 0 4px; padding: 4px 10px; color: grey; cursor: pointer;'><</span></span>");
+                $("#paginationBtns").append("<span><input id='pgn_input' type='text' value='1 of " + arr.length + "' style=' border: 1px solid #D6DBDF; padding: 3px; width: 70px;' class='text-center' /></span>")
+                $("#paginationBtns").append("<span><span id='nextBtnPage' style=' margin-left: 0px; border: 1px solid #D6DBDF; border-radius: 0 4px 4px 0; padding: 4px 10px; color: grey; cursor: pointer;'>></span></span>");
+
+                $("#nextBtnPage").click(function(){
+                    for( a=0; a<=arr.length; a++ ){
+                        if( a <= (arr.length - 10) ){
+                            if($("#navEachBtn_"+a).hasClass('d-block')){
+                                $("#navEachBtn_"+a).removeClass('d-block');
+                                $("#navEachBtn_"+a).addClass('d-none');
+                            }else{
+                                $("#navEachBtn_"+a).addClass('d-none');
+                            }
+                        }else{
+                            if($("#navEachBtn_"+a).hasClass('d-none')){
+                                $("#navEachBtn_"+a).removeClass('d-none');
+                                $("#navEachBtn_"+a).addClass('d-block');
+                            }else{
+                                $("#navEachBtn_"+a).addClass('d-block');
+                            }
+                        }
+                    }
+                })
+
+                $("#previousBtnPage").click(function(){
+                    for( a=0; a<=arr.length; a++ ){
+                        if( a <= 10 ){
+                            if($("#navEachBtn_"+a).hasClass('d-none')){
+                                $("#navEachBtn_"+a).removeClass('d-none');
+                                $("#navEachBtn_"+a).addClass('d-block');
+                            }else{
+                                $("#navEachBtn_"+a).addClass('d-block');
+                            }
+                        }else{
+                            if($("#navEachBtn_"+a).hasClass('d-block')){
+                                $("#navEachBtn_"+a).removeClass('d-block');
+                                $("#navEachBtn_"+a).addClass('d-none');
+                            }else{
+                                $("#navEachBtn_"+a).addClass('d-none');
+                            }
+                        }
+                    }
+                })
+
+
+            }else{
+
+            }
+            /* End of Testing Block on navigation */
+
+
+            // triggerAtY = $('#subBlock_A5').offset().top - $(window).outerHeight();
+            // alert(triggerAtY);
+
+
+
+
+        }
+
+    function createNavButtons(arr){
+
+        for(a=0;a<arr.length;a++){
+            var sumId = arr[a]['section'] + (a+1);
+            if( $("#navBtn_" + sumId ).length > 0 ){
+                if(arr[a]['student_answer'] != null && arr[a]['student_answer'] != ""){
+                    $("#navBtn_" + sumId ).css('color','green');
+                    $("#navBtn_" + sumId ).css('font-weight','bold');
+                }
+            }
+        }
+
+    }
+    function updateAnsToArray(){
+        // alert( $(".stAnswer").length );
+        for(a=0;a<$(".stAnswer").length;a++){
+            var curElm = $(".stAnswer")[a];
+            var section = $(curElm).attr('data-sec');
+            var order = $(curElm).attr('data-order');
+            //groups['A']
+            groups[section][order]['student_answer'] = $(curElm).val();
+            console.log(groups[section][order]);
+        }
+        console.log(groups);
+    }
+
+
+// }); // end of document ready
+
+
+
+
+
+    $(window).scroll(function(event) {
+        if($('#subBlock_A1').length > 0){
+            var eTA1 = $('#subBlock_A1').offset().top;
+        }
+        if($('#subBlock_A2').length > 0){
+            var eTA2 = $('#subBlock_A2').offset().top;
+        }
+        if($('#subBlock_A3').length > 0){
+            var eTA3 = $('#subBlock_A3').offset().top;
+        }
+        if($('#subBlock_A4').length > 0){
+            var eTA4 = $('#subBlock_A4').offset().top;
+        }
+        if($('#subBlock_A5').length > 0){
+            var eTA5 = $('#subBlock_A5').offset().top;
+        }
+        if($('#subBlock_A6').length > 0){
+            var eTA6 = $('#subBlock_A6').offset().top;
+        }
+        if($('#subBlock_A7').length > 0){
+            var eTA7 = $('#subBlock_A7').offset().top;
+        }
+        if($('#subBlock_A8').length > 0){
+            var eTA8 = $('#subBlock_A8').offset().top;
+        }
+        if($('#subBlock_A9').length > 0){
+            var eTA9 = $('#subBlock_A9').offset().top;
+        }
+        if($('#subBlock_A10').length > 0){
+            var eTA10 = $('#subBlock_A10').offset().top;
+        }
+        if($('#subBlock_A11').length > 0){
+            var eTA11 = $('#subBlock_A11').offset().top;
+        }
+        if($('#subBlock_A12').length > 0){
+            var eTA12 = $('#subBlock_A12').offset().top;
+        }
+        if($('#subBlock_A13').length > 0){
+            var eTA13 = $('#subBlock_A13').offset().top;
+        }
+        if($('#subBlock_A14').length > 0){
+            var eTA14 = $('#subBlock_A14').offset().top;
+        }
+        if($('#subBlock_A15').length > 0){
+            var eTA15 = $('#subBlock_A15').offset().top;
+        }
+        if($('#subBlock_A16').length > 0){
+            var eTA16 = $('#subBlock_A16').offset().top;
+        }
+        if($('#subBlock_A17').length > 0){
+            var eTA17 = $('#subBlock_A17').offset().top;
+        }
+        if($('#subBlock_A18').length > 0){
+            var eTA18 = $('#subBlock_A18').offset().top;
+        }
+        if($('#subBlock_A19').length > 0){
+            var eTA19 = $('#subBlock_A19').offset().top;
+        }
+        if($('#subBlock_A20').length > 0){
+            var eTA20 = $('#subBlock_A20').offset().top;
+        }
+        if($('#subBlock_A21').length > 0){
+            var eTA21 = $('#subBlock_A21').offset().top;
+        }
+        if($('#subBlock_A22').length > 0){
+            var eTA22 = $('#subBlock_A22').offset().top;
+        }
+        if($('#subBlock_A23').length > 0){
+            var eTA23 = $('#subBlock_A23').offset().top;
+        }
+        if($('#subBlock_A24').length > 0){
+            var eTA24 = $('#subBlock_A24').offset().top;
+        }
+        if($('#subBlock_A25').length > 0){
+            var eTA25 = $('#subBlock_A25').offset().top;
+        }
+        if($('#subBlock_B1').length > 0){
+            var eTB1 = $('#subBlock_B1').offset().top;
+        }
+        if($('#subBlock_B2').length > 0){
+            var eTB2 = $('#subBlock_B2').offset().top;
+        }
+        if($('#subBlock_B3').length > 0){
+            var eTB3 = $('#subBlock_B3').offset().top;
+        }
+        if($('#subBlock_B4').length > 0){
+            var eTB4 = $('#subBlock_B4').offset().top;
+        }
+        if($('#subBlock_B5').length > 0){
+            var eTB5 = $('#subBlock_B5').offset().top;
+        }
+        if($('#subBlock_B6').length > 0){
+            var eTB6 = $('#subBlock_B6').offset().top;
+        }
+        if($('#subBlock_B7').length > 0){
+            var eTB7 = $('#subBlock_B7').offset().top;
+        }
+        if($('#subBlock_B8').length > 0){
+            var eTB8 = $('#subBlock_B8').offset().top;
+        }
+        if($('#subBlock_B9').length > 0){
+            var eTB9 = $('#subBlock_B9').offset().top;
+        }
+        if($('#subBlock_B10').length > 0){
+            var eTB10 = $('#subBlock_B10').offset().top;
+        }
+        if($('#subBlock_B11').length > 0){
+            var eTB11 = $('#subBlock_B11').offset().top;
+        }
+        if($('#subBlock_B12').length > 0){
+            var eTB12 = $('#subBlock_B12').offset().top;
+        }
+        if($('#subBlock_B13').length > 0){
+            var eTB13 = $('#subBlock_B13').offset().top;
+        }
+        if($('#subBlock_B14').length > 0){
+            var eTB14 = $('#subBlock_B14').offset().top;
+        }
+        if($('#subBlock_B15').length > 0){
+            var eTB15 = $('#subBlock_B15').offset().top;
+        }
+        if($('#subBlock_B16').length > 0){
+            var eTB16 = $('#subBlock_B16').offset().top;
+        }
+        if($('#subBlock_B17').length > 0){
+            var eTB17 = $('#subBlock_B17').offset().top;
+        }
+        if($('#subBlock_B18').length > 0){
+            var eTB18 = $('#subBlock_B18').offset().top;
+        }
+        if($('#subBlock_B19').length > 0){
+            var eTB19 = $('#subBlock_B19').offset().top;
+        }
+        if($('#subBlock_B20').length > 0){
+            var eTB20 = $('#subBlock_B20').offset().top;
+        }
+        if($('#subBlock_B21').length > 0){
+            var eTB21 = $('#subBlock_B21').offset().top;
+        }
+        if($('#subBlock_B22').length > 0){
+            var eTB22 = $('#subBlock_B22').offset().top;
+        }
+        if($('#subBlock_B23').length > 0){
+            var eTB23 = $('#subBlock_B23').offset().top;
+        }
+        if($('#subBlock_B24').length > 0){
+            var eTB24 = $('#subBlock_B24').offset().top;
+        }
+        if($('#subBlock_B25').length > 0){
+            var eTB25 = $('#subBlock_B25').offset().top;
+        }
+        if($('#subBlock_C1').length > 0){
+            var eTC1 = $('#subBlock_C1').offset().top;
+        }
+        if($('#subBlock_C2').length > 0){
+            var eTC2 = $('#subBlock_C2').offset().top;
+        }
+        if($('#subBlock_C3').length > 0){
+            var eTC3 = $('#subBlock_C3').offset().top;
+        }
+        if($('#subBlock_C4').length > 0){
+            var eTC4 = $('#subBlock_C4').offset().top;
+        }
+        if($('#subBlock_C5').length > 0){
+            var eTC5 = $('#subBlock_C5').offset().top;
+        }
+        if($('#subBlock_C6').length > 0){
+            var eTC6 = $('#subBlock_C6').offset().top;
+        }
+        if($('#subBlock_C7').length > 0){
+            var eTC7 = $('#subBlock_C7').offset().top;
+        }
+        if($('#subBlock_C8').length > 0){
+            var eTC8 = $('#subBlock_C8').offset().top;
+        }
+        if($('#subBlock_C9').length > 0){
+            var eTC9 = $('#subBlock_C9').offset().top;
+        }
+        if($('#subBlock_C10').length > 0){
+            var eTC10 = $('#subBlock_C10').offset().top;
+        }
+        if($('#subBlock_C11').length > 0){
+            var eTC11 = $('#subBlock_C11').offset().top;
+        }
+        if($('#subBlock_C12').length > 0){
+            var eTC12 = $('#subBlock_C12').offset().top;
+        }
+        if($('#subBlock_C13').length > 0){
+            var eTC13 = $('#subBlock_C13').offset().top;
+        }
+        if($('#subBlock_C14').length > 0){
+            var eTC14 = $('#subBlock_C14').offset().top;
+        }
+        if($('#subBlock_C15').length > 0){
+            var eTC15 = $('#subBlock_C15').offset().top;
+        }
+        if($('#subBlock_C16').length > 0){
+            var eTC16 = $('#subBlock_C16').offset().top;
+        }
+        if($('#subBlock_C17').length > 0){
+            var eTC17 = $('#subBlock_C17').offset().top;
+        }
+        if($('#subBlock_C18').length > 0){
+            var eTC18 = $('#subBlock_C18').offset().top;
+        }
+        if($('#subBlock_C19').length > 0){
+            var eTC19 = $('#subBlock_C19').offset().top;
+        }
+        if($('#subBlock_C20').length > 0){
+            var eTC20 = $('#subBlock_C20').offset().top;
+        }
+        if($('#subBlock_C21').length > 0){
+            var eTC21 = $('#subBlock_C21').offset().top;
+        }
+        if($('#subBlock_C22').length > 0){
+            var eTC22 = $('#subBlock_C22').offset().top;
+        }
+        if($('#subBlock_C23').length > 0){
+            var eTC23 = $('#subBlock_C23').offset().top;
+        }
+        if($('#subBlock_C24').length > 0){
+            var eTC24 = $('#subBlock_C24').offset().top;
+        }
+        if($('#subBlock_C25').length > 0){
+            var eTC25 = $('#subBlock_C25').offset().top;
+        }
+        if($('#subBlock_D1').length > 0){
+            var eTD1 = $('#subBlock_D1').offset().top;
+        }
+        if($('#subBlock_D2').length > 0){
+            var eTD2 = $('#subBlock_D2').offset().top;
+        }
+        if($('#subBlock_D3').length > 0){
+            var eTD3 = $('#subBlock_D3').offset().top;
+        }
+        if($('#subBlock_D4').length > 0){
+            var eTD4 = $('#subBlock_D4').offset().top;
+        }
+        if($('#subBlock_D5').length > 0){
+            var eTD5 = $('#subBlock_D5').offset().top;
+        }
+        if($('#subBlock_D6').length > 0){
+            var eTD6 = $('#subBlock_D6').offset().top;
+        }
+        if($('#subBlock_D7').length > 0){
+            var eTD7 = $('#subBlock_D7').offset().top;
+        }
+        if($('#subBlock_D8').length > 0){
+            var eTD8 = $('#subBlock_D8').offset().top;
+        }
+        if($('#subBlock_D9').length > 0){
+            var eTD9 = $('#subBlock_D9').offset().top;
+        }
+        if($('#subBlock_D10').length > 0){
+            var eTD10 = $('#subBlock_D10').offset().top;
+        }
+        if($('#subBlock_D11').length > 0){
+            var eTD11 = $('#subBlock_D11').offset().top;
+        }
+        if($('#subBlock_D12').length > 0){
+            var eTD12 = $('#subBlock_D12').offset().top;
+        }
+        if($('#subBlock_D13').length > 0){
+            var eTD13 = $('#subBlock_D13').offset().top;
+        }
+        if($('#subBlock_D14').length > 0){
+            var eTD14 = $('#subBlock_D14').offset().top;
+        }
+        if($('#subBlock_D15').length > 0){
+            var eTD15 = $('#subBlock_D15').offset().top;
+        }
+        if($('#subBlock_D16').length > 0){
+            var eTD16 = $('#subBlock_D16').offset().top;
+        }
+        if($('#subBlock_D17').length > 0){
+            var eTD17 = $('#subBlock_D17').offset().top;
+        }
+        if($('#subBlock_D18').length > 0){
+            var eTD18 = $('#subBlock_D18').offset().top;
+        }
+        if($('#subBlock_D19').length > 0){
+            var eTD19 = $('#subBlock_D19').offset().top;
+        }
+        if($('#subBlock_D20').length > 0){
+            var eTD20 = $('#subBlock_D20').offset().top;
+        }
+        if($('#subBlock_D21').length > 0){
+            var eTD21 = $('#subBlock_D21').offset().top;
+        }
+        if($('#subBlock_D22').length > 0){
+            var eTD22 = $('#subBlock_D22').offset().top;
+        }
+        if($('#subBlock_D23').length > 0){
+            var eTD23 = $('#subBlock_D23').offset().top;
+        }
+        if($('#subBlock_D24').length > 0){
+            var eTD24 = $('#subBlock_D24').offset().top;
+        }
+        if($('#subBlock_D25').length > 0){
+            var eTD25 = $('#subBlock_D25').offset().top;
+        }
+        if($('#subBlock_E1').length > 0){
+            var eTE1 = $('#subBlock_E1').offset().top;
+        }
+        if($('#subBlock_E2').length > 0){
+            var eTE2 = $('#subBlock_E2').offset().top;
+        }
+        if($('#subBlock_E3').length > 0){
+            var eTE3 = $('#subBlock_E3').offset().top;
+        }
+        if($('#subBlock_E4').length > 0){
+            var eTE4 = $('#subBlock_E4').offset().top;
+        }
+        if($('#subBlock_E5').length > 0){
+            var eTE5 = $('#subBlock_E5').offset().top;
+        }
+        if($('#subBlock_E6').length > 0){
+            var eTE6 = $('#subBlock_E6').offset().top;
+        }
+        if($('#subBlock_E7').length > 0){
+            var eTE7 = $('#subBlock_E7').offset().top;
+        }
+        if($('#subBlock_E8').length > 0){
+            var eTE8 = $('#subBlock_E8').offset().top;
+        }
+        if($('#subBlock_E9').length > 0){
+            var eTE9 = $('#subBlock_E9').offset().top;
+        }
+        if($('#subBlock_E10').length > 0){
+            var eTE10 = $('#subBlock_E10').offset().top;
+        }
+        if($('#subBlock_E11').length > 0){
+            var eTE11 = $('#subBlock_E11').offset().top;
+        }
+        if($('#subBlock_E12').length > 0){
+            var eTE12 = $('#subBlock_E12').offset().top;
+        }
+        if($('#subBlock_E13').length > 0){
+            var eTE13 = $('#subBlock_E13').offset().top;
+        }
+        if($('#subBlock_E14').length > 0){
+            var eTE14 = $('#subBlock_E14').offset().top;
+        }
+        if($('#subBlock_E15').length > 0){
+            var eTE15 = $('#subBlock_E15').offset().top;
+        }
+        if($('#subBlock_E16').length > 0){
+            var eTE16 = $('#subBlock_E16').offset().top;
+        }
+        if($('#subBlock_E17').length > 0){
+            var eTE17 = $('#subBlock_E17').offset().top;
+        }
+        if($('#subBlock_E18').length > 0){
+            var eTE18 = $('#subBlock_E18').offset().top;
+        }
+        if($('#subBlock_E19').length > 0){
+            var eTE19 = $('#subBlock_E19').offset().top;
+        }
+        if($('#subBlock_E20').length > 0){
+            var eTE20 = $('#subBlock_E20').offset().top;
+        }
+        if($('#subBlock_E21').length > 0){
+            var eTE21 = $('#subBlock_E21').offset().top;
+        }
+        if($('#subBlock_E22').length > 0){
+            var eTE22 = $('#subBlock_E22').offset().top;
+        }
+        if($('#subBlock_E23').length > 0){
+            var eTE23 = $('#subBlock_E23').offset().top;
+        }
+        if($('#subBlock_E24').length > 0){
+            var eTE24 = $('#subBlock_E24').offset().top;
+        }
+        if($('#subBlock_E25').length > 0){
+            var eTE25 = $('#subBlock_E25').offset().top;
+        }
+
+        // var eT1 = $('#subBlock_A1').offset().top;
+        // var eT2 = $('#subBlock_A2').offset().top;
+        // var eT3 = $('#subBlock_A3').offset().top;
+        // var eT4 = $('#subBlock_A4').offset().top;
+        // var eT5 = $('#subBlock_A5').offset().top;
+        // var eT6 = $('#subBlock_A6').offset().top;
+        // if($('#subBlock_A7').length > 0){
+        //     var eT7 = $('#subBlock_A7').offset().top;
+        // }
+        wH = $(this).height(),
+        wSt = $(this).scrollTop();
+
+        if(wSt > (eTA1-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('border','1px solid grey');
+            $('.navBtn').css('color','grey');
+            $('#navBtn_A1').css('border','1px solid black');
+            $('#navBtn_A1').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A1").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A1').attr('data-arr-length');
+            $("#pgn_input").val("1 of " + t_arr_length);
+        }
+        if(wSt > (eTA2-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('border','1px solid grey');
+            $('.navBtn').css('color','grey');
+            $('#navBtn_A2').css('border','1px solid black');
+            $('#navBtn_A2').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A2").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A2').attr('data-arr-length');
+            $("#pgn_input").val("2 of " + t_arr_length);
+        }
+        if(wSt > (eTA3-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('border','1px solid grey');
+            $('.navBtn').css('color','grey');
+            $('#navBtn_A3').css('border','1px solid black');
+            $('#navBtn_A3').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A3").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A3').attr('data-arr-length');
+            $("#pgn_input").val("3 of " + t_arr_length);
+        }
+        if(wSt > (eTA4-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('border','1px solid grey');
+            $('.navBtn').css('color','grey');
+            $('#navBtn_A4').css('border','1px solid black');
+            $('#navBtn_A4').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A4").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A4').attr('data-arr-length');
+            $("#pgn_input").val("4 of " + t_arr_length);
+        }
+        if(wSt > (eTA5-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A5').css('border','1px solid black');
+            $('#navBtn_A5').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A5").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A5').attr('data-arr-length');
+            $("#pgn_input").val("5 of " + t_arr_length);
+        }
+        if(wSt > (eTA6-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A6').css('border','1px solid black');
+            $('#navBtn_A6').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A6").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A6').attr('data-arr-length');
+            $("#pgn_input").val("6 of " + t_arr_length);
+        }
+        if(wSt > (eTA7-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A7').css('border','1px solid black');
+            $('#navBtn_A7').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A7").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A7').attr('data-arr-length');
+            $("#pgn_input").val("7 of " + t_arr_length);
+        }
+        if(wSt > (eTA8-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A8').css('border','1px solid black');
+            $('#navBtn_A8').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A8").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A8').attr('data-arr-length');
+            $("#pgn_input").val("8 of " + t_arr_length);
+        }
+        if(wSt > (eTA9-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A9').css('border','1px solid black');
+            $('#navBtn_A9').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A9").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A9').attr('data-arr-length');
+            $("#pgn_input").val("9 of " + t_arr_length);
+        }
+        if(wSt > (eTA10-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A10').css('border','1px solid black');
+            $('#navBtn_A10').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A10").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A10').attr('data-arr-length');
+            $("#pgn_input").val("10 of " + t_arr_length);
+        }
+        if(wSt > (eTA11-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A11').css('border','1px solid black');
+            $('#navBtn_A11').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A11").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A11').attr('data-arr-length');
+            $("#pgn_input").val("11 of " + t_arr_length);
+        }
+        if(wSt > (eTA12-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A12').css('border','1px solid black');
+            $('#navBtn_A12').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A12").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A12').attr('data-arr-length');
+            $("#pgn_input").val("12 of " + t_arr_length);
+        }
+        if(wSt > (eTA13-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A13').css('border','1px solid black');
+            $('#navBtn_A13').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A13").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A13').attr('data-arr-length');
+            $("#pgn_input").val("13 of " + t_arr_length);
+        }
+        if(wSt > (eTA14-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A14').css('border','1px solid black');
+            $('#navBtn_A14').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A14").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A14').attr('data-arr-length');
+            $("#pgn_input").val("14 of " + t_arr_length);
+        }
+        if(wSt > (eTA15-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A15').css('border','1px solid black');
+            $('#navBtn_A15').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A15").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A15').attr('data-arr-length');
+            $("#pgn_input").val("15 of " + t_arr_length);
+        }
+        if(wSt > (eTA16-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A16').css('border','1px solid black');
+            $('#navBtn_A16').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A16").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A16').attr('data-arr-length');
+            $("#pgn_input").val("16 of " + t_arr_length);
+        }
+        if(wSt > (eTA17-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A17').css('border','1px solid black');
+            $('#navBtn_A17').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A17").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A17').attr('data-arr-length');
+            $("#pgn_input").val("17 of " + t_arr_length);
+        }
+        if(wSt > (eTA18-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A18').css('border','1px solid black');
+            $('#navBtn_A18').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A18").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A18').attr('data-arr-length');
+            $("#pgn_input").val("18 of " + t_arr_length);
+        }
+        if(wSt > (eTA19-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A19').css('border','1px solid black');
+            $('#navBtn_A19').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A19").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A19').attr('data-arr-length');
+            $("#pgn_input").val("19 of " + t_arr_length);
+        }
+        if(wSt > (eTA20-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A20').css('border','1px solid black');
+            $('#navBtn_A20').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A20").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A20').attr('data-arr-length');
+            $("#pgn_input").val("20 of " + t_arr_length);
+        }
+        if(wSt > (eTA21-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A21').css('border','1px solid black');
+            $('#navBtn_A21').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A21").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A21').attr('data-arr-length');
+            $("#pgn_input").val("21 of " + t_arr_length);
+        }
+        if(wSt > (eTA22-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A22').css('border','1px solid black');
+            $('#navBtn_A22').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A22").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A22').attr('data-arr-length');
+            $("#pgn_input").val("22 of " + t_arr_length);
+        }
+        if(wSt > (eTA23-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A23').css('border','1px solid black');
+            $('#navBtn_A23').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A23").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A23').attr('data-arr-length');
+            $("#pgn_input").val("23 of " + t_arr_length);
+        }
+        if(wSt > (eTA24-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A24').css('border','1px solid black');
+            $('#navBtn_A24').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A24").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A24').attr('data-arr-length');
+            $("#pgn_input").val("24 of " + t_arr_length);
+        }
+        if(wSt > (eTA25-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_A25').css('border','1px solid black');
+            $('#navBtn_A25').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_A25").prop('disabled',false);
+            var t_arr_length = $('#navBtn_A25').attr('data-arr-length');
+            $("#pgn_input").val("25 of " + t_arr_length);
+        }
+        if(wSt > (eTB1-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B1').css('border','1px solid black');
+            $('#navBtn_B1').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B1").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B1').attr('data-arr-length');
+            $("#pgn_input").val("1 of " + t_arr_length);
+        }
+        if(wSt > (eTB2-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B2').css('border','1px solid black');
+            $('#navBtn_B2').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B2").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B2').attr('data-arr-length');
+            $("#pgn_input").val("2 of " + t_arr_length);
+        }
+        if(wSt > (eTB3-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B3').css('border','1px solid black');
+            $('#navBtn_B3').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B3").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B3').attr('data-arr-length');
+            $("#pgn_input").val("3 of " + t_arr_length);
+        }
+        if(wSt > (eTB4-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B4').css('border','1px solid black');
+            $('#navBtn_B4').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B4").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B4').attr('data-arr-length');
+            $("#pgn_input").val("4 of " + t_arr_length);
+        }
+        if(wSt > (eTB5-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B5').css('border','1px solid black');
+            $('#navBtn_B5').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B5").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B5').attr('data-arr-length');
+            $("#pgn_input").val("5 of " + t_arr_length);
+        }
+        if(wSt > (eTB6-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B6').css('border','1px solid black');
+            $('#navBtn_B6').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B6").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B6').attr('data-arr-length');
+            $("#pgn_input").val("6 of " + t_arr_length);
+        }
+        if(wSt > (eTB7-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B7').css('border','1px solid black');
+            $('#navBtn_B7').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B7").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B7').attr('data-arr-length');
+            $("#pgn_input").val("7 of " + t_arr_length);
+        }
+        if(wSt > (eTB8-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B8').css('border','1px solid black');
+            $('#navBtn_B8').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B8").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B8').attr('data-arr-length');
+            $("#pgn_input").val("8 of " + t_arr_length);
+        }
+        if(wSt > (eTB9-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B9').css('border','1px solid black');
+            $('#navBtn_B9').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B9").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B9').attr('data-arr-length');
+            $("#pgn_input").val("9 of " + t_arr_length);
+        }
+        if(wSt > (eTB10-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B10').css('border','1px solid black');
+            $('#navBtn_B10').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B10").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B10').attr('data-arr-length');
+            $("#pgn_input").val("10 of " + t_arr_length);
+        }
+        if(wSt > (eTB11-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B11').css('border','1px solid black');
+            $('#navBtn_B11').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B11").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B11').attr('data-arr-length');
+            $("#pgn_input").val("11 of " + t_arr_length);
+        }
+        if(wSt > (eTB12-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B12').css('border','1px solid black');
+            $('#navBtn_B12').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B12").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B12').attr('data-arr-length');
+            $("#pgn_input").val("12 of " + t_arr_length);
+        }
+        if(wSt > (eTB13-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B13').css('border','1px solid black');
+            $('#navBtn_B13').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B13").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B13').attr('data-arr-length');
+            $("#pgn_input").val("13 of " + t_arr_length);
+        }
+        if(wSt > (eTB14-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B14').css('border','1px solid black');
+            $('#navBtn_B14').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B14").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B14').attr('data-arr-length');
+            $("#pgn_input").val("14 of " + t_arr_length);
+        }
+        if(wSt > (eTB15-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B15').css('border','1px solid black');
+            $('#navBtn_B15').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B15").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B15').attr('data-arr-length');
+            $("#pgn_input").val("15 of " + t_arr_length);
+        }
+        if(wSt > (eTB16-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B16').css('border','1px solid black');
+            $('#navBtn_B16').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B16").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B16').attr('data-arr-length');
+            $("#pgn_input").val("16 of " + t_arr_length);
+        }
+        if(wSt > (eTB17-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B17').css('border','1px solid black');
+            $('#navBtn_B17').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B17").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B17').attr('data-arr-length');
+            $("#pgn_input").val("17 of " + t_arr_length);
+        }
+        if(wSt > (eTB18-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B18').css('border','1px solid black');
+            $('#navBtn_B18').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B18").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B18').attr('data-arr-length');
+            $("#pgn_input").val("18 of " + t_arr_length);
+        }
+        if(wSt > (eTB19-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B19').css('border','1px solid black');
+            $('#navBtn_B19').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B19").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B19').attr('data-arr-length');
+            $("#pgn_input").val("19 of " + t_arr_length);
+        }
+        if(wSt > (eTB20-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B20').css('border','1px solid black');
+            $('#navBtn_B20').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B20").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B20').attr('data-arr-length');
+            $("#pgn_input").val("20 of " + t_arr_length);
+        }
+        if(wSt > (eTB21-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B21').css('border','1px solid black');
+            $('#navBtn_B21').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B21").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B21').attr('data-arr-length');
+            $("#pgn_input").val("21 of " + t_arr_length);
+        }
+        if(wSt > (eTB22-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B22').css('border','1px solid black');
+            $('#navBtn_B22').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B22").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B22').attr('data-arr-length');
+            $("#pgn_input").val("22 of " + t_arr_length);
+        }
+        if(wSt > (eTB23-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B23').css('border','1px solid black');
+            $('#navBtn_B23').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B23").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B23').attr('data-arr-length');
+            $("#pgn_input").val("23 of " + t_arr_length);
+        }
+        if(wSt > (eTB24-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B24').css('border','1px solid black');
+            $('#navBtn_B24').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B24").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B24').attr('data-arr-length');
+            $("#pgn_input").val("24 of " + t_arr_length);
+        }
+        if(wSt > (eTB25-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_B25').css('border','1px solid black');
+            $('#navBtn_B25').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_B25").prop('disabled',false);
+            var t_arr_length = $('#navBtn_B25').attr('data-arr-length');
+            $("#pgn_input").val("25 of " + t_arr_length);
+        }
+        if(wSt > (eTC1-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C1').css('border','1px solid black');
+            $('#navBtn_C1').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C1").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C1').attr('data-arr-length');
+            $("#pgn_input").val("1 of " + t_arr_length);
+        }
+        if(wSt > (eTC2-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C2').css('border','1px solid black');
+            $('#navBtn_C2').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C2").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C2').attr('data-arr-length');
+            $("#pgn_input").val("2 of " + t_arr_length);
+        }
+        if(wSt > (eTC3-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C3').css('border','1px solid black');
+            $('#navBtn_C3').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C3").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C3').attr('data-arr-length');
+            $("#pgn_input").val("3 of " + t_arr_length);
+        }
+        if(wSt > (eTC4-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C4').css('border','1px solid black');
+            $('#navBtn_C4').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C4").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C4').attr('data-arr-length');
+            $("#pgn_input").val("4 of " + t_arr_length);
+        }
+        if(wSt > (eTC5-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C5').css('border','1px solid black');
+            $('#navBtn_C5').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C5").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C5').attr('data-arr-length');
+            $("#pgn_input").val("5 of " + t_arr_length);
+        }
+        if(wSt > (eTC6-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C6').css('border','1px solid black');
+            $('#navBtn_C6').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C6").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C6').attr('data-arr-length');
+            $("#pgn_input").val("6 of " + t_arr_length);
+        }
+        if(wSt > (eTC7-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C7').css('border','1px solid black');
+            $('#navBtn_C7').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C7").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C7').attr('data-arr-length');
+            $("#pgn_input").val("7 of " + t_arr_length);
+        }
+        if(wSt > (eTC8-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C8').css('border','1px solid black');
+            $('#navBtn_C8').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C8").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C8').attr('data-arr-length');
+            $("#pgn_input").val("8 of " + t_arr_length);
+        }
+        if(wSt > (eTC9-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C9').css('border','1px solid black');
+            $('#navBtn_C9').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C9").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C9').attr('data-arr-length');
+            $("#pgn_input").val("9 of " + t_arr_length);
+        }
+        if(wSt > (eTC10-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C10').css('border','1px solid black');
+            $('#navBtn_C10').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C10").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C10').attr('data-arr-length');
+            $("#pgn_input").val("10 of " + t_arr_length);
+        }
+        if(wSt > (eTC11-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C11').css('border','1px solid black');
+            $('#navBtn_C11').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C11").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C11').attr('data-arr-length');
+            $("#pgn_input").val("11 of " + t_arr_length);
+        }
+        if(wSt > (eTC12-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C12').css('border','1px solid black');
+            $('#navBtn_C12').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C12").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C12').attr('data-arr-length');
+            $("#pgn_input").val("12 of " + t_arr_length);
+        }
+        if(wSt > (eTC13-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C13').css('border','1px solid black');
+            $('#navBtn_C13').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C13").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C13').attr('data-arr-length');
+            $("#pgn_input").val("13 of " + t_arr_length);
+        }
+        if(wSt > (eTC14-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C14').css('border','1px solid black');
+            $('#navBtn_C14').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C14").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C14').attr('data-arr-length');
+            $("#pgn_input").val("14 of " + t_arr_length);
+        }
+        if(wSt > (eTC15-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C15').css('border','1px solid black');
+            $('#navBtn_C15').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C15").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C15').attr('data-arr-length');
+            $("#pgn_input").val("15 of " + t_arr_length);
+        }
+        if(wSt > (eTC16-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C16').css('border','1px solid black');
+            $('#navBtn_C16').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C16").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C16').attr('data-arr-length');
+            $("#pgn_input").val("16 of " + t_arr_length);
+        }
+        if(wSt > (eTC17-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C17').css('border','1px solid black');
+            $('#navBtn_C17').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C17").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C17').attr('data-arr-length');
+            $("#pgn_input").val("17 of " + t_arr_length);
+        }
+        if(wSt > (eTC18-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C18').css('border','1px solid black');
+            $('#navBtn_C18').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C18").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C18').attr('data-arr-length');
+            $("#pgn_input").val("18 of " + t_arr_length);
+        }
+        if(wSt > (eTC19-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C19').css('border','1px solid black');
+            $('#navBtn_C19').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C19").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C19').attr('data-arr-length');
+            $("#pgn_input").val("19 of " + t_arr_length);
+        }
+        if(wSt > (eTC20-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C20').css('border','1px solid black');
+            $('#navBtn_C20').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C20").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C20').attr('data-arr-length');
+            $("#pgn_input").val("20 of " + t_arr_length);
+        }
+        if(wSt > (eTC21-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C21').css('border','1px solid black');
+            $('#navBtn_C21').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C21").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C21').attr('data-arr-length');
+            $("#pgn_input").val("21 of " + t_arr_length);
+        }
+        if(wSt > (eTC22-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C22').css('border','1px solid black');
+            $('#navBtn_C22').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C22").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C22').attr('data-arr-length');
+            $("#pgn_input").val("22 of " + t_arr_length);
+        }
+        if(wSt > (eTC23-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C23').css('border','1px solid black');
+            $('#navBtn_C23').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C23").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C23').attr('data-arr-length');
+            $("#pgn_input").val("23 of " + t_arr_length);
+        }
+        if(wSt > (eTC24-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C24').css('border','1px solid black');
+            $('#navBtn_C24').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C24").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C24').attr('data-arr-length');
+            $("#pgn_input").val("24 of " + t_arr_length);
+        }
+        if(wSt > (eTC25-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_C25').css('border','1px solid black');
+            $('#navBtn_C25').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_C25").prop('disabled',false);
+            var t_arr_length = $('#navBtn_C25').attr('data-arr-length');
+            $("#pgn_input").val("25 of " + t_arr_length);
+        }
+        if(wSt > (eTD1-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D1').css('border','1px solid black');
+            $('#navBtn_D1').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D1").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D1').attr('data-arr-length');
+            $("#pgn_input").val("1 of " + t_arr_length);
+        }
+        if(wSt > (eTD2-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D2').css('border','1px solid black');
+            $('#navBtn_D2').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D2").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D2').attr('data-arr-length');
+            $("#pgn_input").val("2 of " + t_arr_length);
+        }
+        if(wSt > (eTD3-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D3').css('border','1px solid black');
+            $('#navBtn_D3').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D3").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D3').attr('data-arr-length');
+            $("#pgn_input").val("3 of " + t_arr_length);
+        }
+        if(wSt > (eTD4-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D4').css('border','1px solid black');
+            $('#navBtn_D4').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D4").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D4').attr('data-arr-length');
+            $("#pgn_input").val("4 of " + t_arr_length);
+        }
+        if(wSt > (eTD5-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D5').css('border','1px solid black');
+            $('#navBtn_D5').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D5").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D5').attr('data-arr-length');
+            $("#pgn_input").val("5 of " + t_arr_length);
+        }
+        if(wSt > (eTD6-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D6').css('border','1px solid black');
+            $('#navBtn_D6').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D6").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D6').attr('data-arr-length');
+            $("#pgn_input").val("6 of " + t_arr_length);
+        }
+        if(wSt > (eTD7-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D7').css('border','1px solid black');
+            $('#navBtn_D7').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D7").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D7').attr('data-arr-length');
+            $("#pgn_input").val("7 of " + t_arr_length);
+        }
+        if(wSt > (eTD8-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D8').css('border','1px solid black');
+            $('#navBtn_D8').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D8").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D8').attr('data-arr-length');
+            $("#pgn_input").val("8 of " + t_arr_length);
+        }
+        if(wSt > (eTD9-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D9').css('border','1px solid black');
+            $('#navBtn_D9').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D9").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D9').attr('data-arr-length');
+            $("#pgn_input").val("9 of " + t_arr_length);
+        }
+        if(wSt > (eTD10-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D10').css('border','1px solid black');
+            $('#navBtn_D10').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D10").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D10').attr('data-arr-length');
+            $("#pgn_input").val("10 of " + t_arr_length);
+        }
+        if(wSt > (eTD11-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D11').css('border','1px solid black');
+            $('#navBtn_D11').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D11").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D11').attr('data-arr-length');
+            $("#pgn_input").val("11 of " + t_arr_length);
+        }
+        if(wSt > (eTD12-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D12').css('border','1px solid black');
+            $('#navBtn_D12').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D12").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D12').attr('data-arr-length');
+            $("#pgn_input").val("12 of " + t_arr_length);
+        }
+        if(wSt > (eTD13-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D13').css('border','1px solid black');
+            $('#navBtn_D13').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D13").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D13').attr('data-arr-length');
+            $("#pgn_input").val("13 of " + t_arr_length);
+        }
+        if(wSt > (eTD14-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D14').css('border','1px solid black');
+            $('#navBtn_D14').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D14").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D14').attr('data-arr-length');
+            $("#pgn_input").val("14 of " + t_arr_length);
+        }
+        if(wSt > (eTD15-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D15').css('border','1px solid black');
+            $('#navBtn_D15').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D15").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D15').attr('data-arr-length');
+            $("#pgn_input").val("15 of " + t_arr_length);
+        }
+        if(wSt > (eTD16-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D16').css('border','1px solid black');
+            $('#navBtn_D16').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D16").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D16').attr('data-arr-length');
+            $("#pgn_input").val("16 of " + t_arr_length);
+        }
+        if(wSt > (eTD17-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D17').css('border','1px solid black');
+            $('#navBtn_D17').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D17").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D17').attr('data-arr-length');
+            $("#pgn_input").val("17 of " + t_arr_length);
+        }
+        if(wSt > (eTD18-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D18').css('border','1px solid black');
+            $('#navBtn_D18').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D18").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D18').attr('data-arr-length');
+            $("#pgn_input").val("18 of " + t_arr_length);
+        }
+        if(wSt > (eTD19-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D19').css('border','1px solid black');
+            $('#navBtn_D19').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D19").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D19').attr('data-arr-length');
+            $("#pgn_input").val("19 of " + t_arr_length);
+        }
+        if(wSt > (eTD20-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D20').css('border','1px solid black');
+            $('#navBtn_D20').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D20").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D20').attr('data-arr-length');
+            $("#pgn_input").val("20 of " + t_arr_length);
+        }
+        if(wSt > (eTD21-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D21').css('border','1px solid black');
+            $('#navBtn_D21').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D21").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D21').attr('data-arr-length');
+            $("#pgn_input").val("21 of " + t_arr_length);
+        }
+        if(wSt > (eTD22-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D22').css('border','1px solid black');
+            $('#navBtn_D22').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D22").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D22').attr('data-arr-length');
+            $("#pgn_input").val("22 of " + t_arr_length);
+        }
+        if(wSt > (eTD23-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D23').css('border','1px solid black');
+            $('#navBtn_D23').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D23").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D23').attr('data-arr-length');
+            $("#pgn_input").val("23 of " + t_arr_length);
+        }
+        if(wSt > (eTD24-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D24').css('border','1px solid black');
+            $('#navBtn_D24').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D24").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D24').attr('data-arr-length');
+            $("#pgn_input").val("24 of " + t_arr_length);
+        }
+        if(wSt > (eTD25-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_D25').css('border','1px solid black');
+            $('#navBtn_D25').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_D25").prop('disabled',false);
+            var t_arr_length = $('#navBtn_D25').attr('data-arr-length');
+            $("#pgn_input").val("25 of " + t_arr_length);
+        }
+        if(wSt > (eTE1-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E1').css('border','1px solid black');
+            $('#navBtn_E1').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E1").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E1').attr('data-arr-length');
+            $("#pgn_input").val("1 of " + t_arr_length);
+        }
+        if(wSt > (eTE2-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E2').css('border','1px solid black');
+            $('#navBtn_E2').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E2").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E2').attr('data-arr-length');
+            $("#pgn_input").val("2 of " + t_arr_length);
+        }
+        if(wSt > (eTE3-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E3').css('border','1px solid black');
+            $('#navBtn_E3').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E3").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E3').attr('data-arr-length');
+            $("#pgn_input").val("3 of " + t_arr_length);
+        }
+        if(wSt > (eTE4-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E4').css('border','1px solid black');
+            $('#navBtn_E4').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E4").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E4').attr('data-arr-length');
+            $("#pgn_input").val("4 of " + t_arr_length);
+        }
+        if(wSt > (eTE5-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E5').css('border','1px solid black');
+            $('#navBtn_E5').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E5").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E5').attr('data-arr-length');
+            $("#pgn_input").val("5 of " + t_arr_length);
+        }
+        if(wSt > (eTE6-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E6').css('border','1px solid black');
+            $('#navBtn_E6').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E6").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E6').attr('data-arr-length');
+            $("#pgn_input").val("6 of " + t_arr_length);
+        }
+        if(wSt > (eTE7-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E7').css('border','1px solid black');
+            $('#navBtn_E7').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E7").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E7').attr('data-arr-length');
+            $("#pgn_input").val("7 of " + t_arr_length);
+        }
+        if(wSt > (eTE8-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E8').css('border','1px solid black');
+            $('#navBtn_E8').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E8").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E8').attr('data-arr-length');
+            $("#pgn_input").val("8 of " + t_arr_length);
+        }
+        if(wSt > (eTE9-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E9').css('border','1px solid black');
+            $('#navBtn_E9').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E9").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E9').attr('data-arr-length');
+            $("#pgn_input").val("9 of " + t_arr_length);
+        }
+        if(wSt > (eTE10-(wH/4))) {
+            $("#previousBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E10').css('border','1px solid black');
+            $('#navBtn_E10').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E10").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E10').attr('data-arr-length');
+            $("#pgn_input").val("10 of " + t_arr_length);
+        }
+        if(wSt > (eTE11-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E11').css('border','1px solid black');
+            $('#navBtn_E11').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E11").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E11').attr('data-arr-length');
+            $("#pgn_input").val("11 of " + t_arr_length);
+        }
+        if(wSt > (eTE12-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E12').css('border','1px solid black');
+            $('#navBtn_E12').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E12").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E12').attr('data-arr-length');
+            $("#pgn_input").val("12 of " + t_arr_length);
+        }
+        if(wSt > (eTE13-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E13').css('border','1px solid black');
+            $('#navBtn_E13').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E13").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E13').attr('data-arr-length');
+            $("#pgn_input").val("13 of " + t_arr_length);
+        }
+        if(wSt > (eTE14-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E14').css('border','1px solid black');
+            $('#navBtn_E14').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E14").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E14').attr('data-arr-length');
+            $("#pgn_input").val("14 of " + t_arr_length);
+        }
+        if(wSt > (eTE15-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E15').css('border','1px solid black');
+            $('#navBtn_E15').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E15").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E15').attr('data-arr-length');
+            $("#pgn_input").val("15 of " + t_arr_length);
+        }
+        if(wSt > (eTE16-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E16').css('border','1px solid black');
+            $('#navBtn_E16').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E16").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E16').attr('data-arr-length');
+            $("#pgn_input").val("16 of " + t_arr_length);
+        }
+        if(wSt > (eTE17-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E17').css('border','1px solid black');
+            $('#navBtn_E17').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E17").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E17').attr('data-arr-length');
+            $("#pgn_input").val("17 of " + t_arr_length);
+        }
+        if(wSt > (eTE18-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E18').css('border','1px solid black');
+            $('#navBtn_E18').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E18").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E18').attr('data-arr-length');
+            $("#pgn_input").val("18 of " + t_arr_length);
+        }
+        if(wSt > (eTE19-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E19').css('border','1px solid black');
+            $('#navBtn_E19').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E19").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E19').attr('data-arr-length');
+            $("#pgn_input").val("19 of " + t_arr_length);
+        }
+        if(wSt > (eTE20-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E20').css('border','1px solid black');
+            $('#navBtn_E20').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E20").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E20').attr('data-arr-length');
+            $("#pgn_input").val("20 of " + t_arr_length);
+        }
+        if(wSt > (eTE21-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E21').css('border','1px solid black');
+            $('#navBtn_E21').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E21").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E21').attr('data-arr-length');
+            $("#pgn_input").val("21 of " + t_arr_length);
+        }
+        if(wSt > (eTE22-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E22').css('border','1px solid black');
+            $('#navBtn_E22').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E22").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E22').attr('data-arr-length');
+            $("#pgn_input").val("22 of " + t_arr_length);
+        }
+        if(wSt > (eTE23-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E23').css('border','1px solid black');
+            $('#navBtn_E23').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E23").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E23').attr('data-arr-length');
+            $("#pgn_input").val("23 of " + t_arr_length);
+        }
+        if(wSt > (eTE24-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E24').css('border','1px solid black');
+            $('#navBtn_E24').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E24").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E24').attr('data-arr-length');
+            $("#pgn_input").val("24 of " + t_arr_length);
+        }
+        if(wSt > (eTE25-(wH/4))) {
+            $("#nextBtnPage").click();
+            $('.navBtn').css('color','grey');
+            $('.navBtn').css('border','1px solid grey');
+            $('#navBtn_E25').css('border','1px solid black');
+            $('#navBtn_E25').css('color','black');
+            $(".stAnswer").prop('disabled',true);
+            $("#ans_E25").prop('disabled',false);
+            var t_arr_length = $('#navBtn_E25').attr('data-arr-length');
+            $("#pgn_input").val("25 of " + t_arr_length);
+        }
+
+
+
+
+    });
+
+
+    function get_elapsed_time_string(total_seconds) {
+    function pretty_time_string(num) {
+        return ( num < 10 ? "0" : "" ) + num;
+    }
+
+    var hours = Math.floor(total_seconds / 3600);
+    total_seconds = total_seconds % 3600;
+
+    var minutes = Math.floor(total_seconds / 60);
+    total_seconds = total_seconds % 60;
+
+    var seconds = Math.floor(total_seconds);
+
+    // Pad the minutes and seconds with leading zeros, if required
+    hours = pretty_time_string(hours);
+    minutes = pretty_time_string(minutes);
+    seconds = pretty_time_string(seconds);
+
+    // Compose the string for display
+    var currentTimeString = hours + ":" + minutes + ":" + seconds;
+
+    return currentTimeString;
+    }
+
+
+    var elapsed_seconds = 0;
+    myTimer = setInterval(function() {
+    elapsed_seconds = elapsed_seconds + 1;
+    $('.Timer').text(get_elapsed_time_string(elapsed_seconds));
+    //   $('.Timer').text(elapsed_seconds);
+    if(elapsed_seconds === 120){
+        $(".Timer").css({ 'color': 'orange', 'font-size': '110%' });
+    }
+    if(elapsed_seconds === 180){
+        // clearInterval(myTimer);
+        $(".Timer").css({ 'color': 'red', 'font-size': '120%' });
+        // alert('Timeout');
+    }
+    }, 1000);
+
+    // }
+});
+
+function showResult(id){
+        var newArray = [];
+        if(groups['A']){
+            newArray.push(groups['A']);
+        }
+        if(groups['B']){
+            newArray.push(groups['B']);
+        }
+        if(groups['C']){
+            newArray.push(groups['C']);
+        }
+        if(groups['D']){
+            newArray.push(groups['D']);
+        }
+        if(groups['E']){
+            newArray.push(groups['E']);
+        }
+
+        totalSums = 0;
+        correctAns = 0;
+        for(xx=0;xx<newArray.length;xx++){
+            for(yy=0;yy<newArray[xx].length;yy++){
+                if( newArray[xx][yy]['student_answer'] != null && newArray[xx][yy]['student_answer'] != "" )
+                {
+                    // debugger;
+                    if( parseFloat(newArray[xx][yy]['answer']) == parseFloat(newArray[xx][yy]['student_answer']) ){
+                        correctAns += 1;
+                    }
+                }
+                totalSums += 1;
+            }
+        }
+
+        //return;
+        // console.log(newArray);
+        //     alert('test');
+        // sumsArray[sumsArray.length - 1]['student_answer'] = $("#answer_input").val();
+        // sumsArray[sumsArray.length - 1]['end_time']    = $('.Timer').text();
+        // sumsArray[sumsArray.length - 1]['start_time']    = $('.Timer').text();
+        $("#hdn_test_st").val(id);
+
+        // correctAns = 0;
+        // for(xx=0;xx<sumsArray.length;xx++){
+        //     if(sumsArray[xx]['answer'] == sumsArray[xx]['student_answer']){
+        //         correctAns += 1
+        //     }
+        // }
+        var tz = moment.tz.guess();
+
+        $("#hdn_test_data").val(JSON.stringify({'correct_answer':correctAns, 'total_sums': totalSums, 'time_taken': $('.Timer').text(), 'time_zone': tz}));
+        $("#form-show-test-review").submit();
+    }
+
+
+
+    </script>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function(){
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        document.getElementById('navbar_top').classList.add('fixed-top');
+        // add padding top to show content behind navbar
+        navbar_height = document.querySelector('.navbar').offsetHeight;
+        document.body.style.paddingTop = navbar_height + 'px';
+      } else {
+        document.getElementById('navbar_top').classList.remove('fixed-top');
+         // remove padding top from body
+        document.body.style.paddingTop = '0';
+      }
+  });
+});
+
+</script>
+</body>
+</html>
